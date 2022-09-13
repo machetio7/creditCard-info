@@ -40,11 +40,11 @@ input:focus {
   background-image: url("../assets/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 10vh;
   align-items: center;
-  justify-items: center;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10vh;
+  position: relative;
 }
 .credit-card__back {
   width: 280px;
@@ -67,7 +67,6 @@ input:focus {
   position: relative;
   top: -90px;
   right: 25px;
-  background-color: transparent;
 }
 .credit-card__front img {
   background-color: transparent;
@@ -201,7 +200,7 @@ input:focus {
 
 .thank-you {
   display: none;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -276,6 +275,7 @@ input:focus {
     letter-spacing: 1px;
     padding: 0 50px;
   }
+
   .credit-infor__input-cvc {
     margin: 0 0 0 20px;
     width: 100%;
@@ -290,14 +290,16 @@ input:focus {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
+
   .credit-card {
     height: 100%;
+    justify-content: center;
   }
   .credit-card__back {
     width: 380px;
     height: 208px;
     right: -40%;
-    top: 50%;
+    top: 225px;
   }
   .credit-card__back img {
     width: 100%;
@@ -312,8 +314,8 @@ input:focus {
   .credit-card__front {
     width: 380px;
     height: 208px;
-    top: -10%;
     right: -30%;
+    top: -210px;
   }
   .credit-card__front img {
     width: 100%;
@@ -345,6 +347,7 @@ input:focus {
     letter-spacing: 1px;
     padding: 0 30px;
   }
+
   .container__credit-info {
     display: flex;
     height: 100%;
@@ -353,15 +356,15 @@ input:focus {
     align-items: center;
     flex-direction: column;
   }
+
   .input-item {
     width: 60%;
   }
-  .creditCardForm {
-    height: 90%;
-  }
+
   .button {
     width: 50%;
   }
+
   .thank-you {
     display: none;
     height: 100%;
@@ -374,7 +377,8 @@ input:focus {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #cbc9cc;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 :-ms-input-placeholder {
