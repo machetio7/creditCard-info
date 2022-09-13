@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="credit-card">
+        <figure class="credit-card__back">
+          <img src="./assets/bg-card-back.png" alt="Credit card back" />
+          <p class="credit-card__back__cvc" id="cvc">000</p>
+        </figure>
+        <figure class="credit-card__front">
+          <img src="./assets/bg-card-front.png" alt="Credit card front" />
+          <p class="credit-card__front__number" id="number">
+            0000 0000 0000 0000
+          </p>
+          <div class="credit-card__front__data">
+            <p id="user">JANE APPLESEED</p>
+            <p id="date">00/00</p>
+          </div>
+        </figure>
+      </section>
+
+      <form id="creditCardForm" class="creditCardForm">
+        <section class="container__credit-info">
+          <div class="input-item">
+            <label class="input-item__title" for="user">Cardholder Name</label>
+            <input
+              type="text"
+              required
+              placeholder="e.g. Jane Appleseed"
+              id="userCard"
+              maxlength="40"
+              oninput="validateFieldLength(this)"
+              name="userCard"
+              class="input-item__input"
+            />
+            <p class="input-item__error" hidden id="userCard_error" aria-hidden="true">Can't be blank</p>
+          </div>
+          <div class="input-item">
+            <label class="input-item__title" for="number">Card Number</label>
+            <input
+              type="number"
+              required
+              placeholder="e.g. 1234 5678 9123 0000"
+              id="numberCard"
+              name="numberCard"
+              maxlength="16"
+              oninput="validateFieldLength(this)"
+              class="input-item__input"
+            />
+            <p id="numberCard_error" hidden class="input-item__error">Wrong format, number only</p>
+          </div>
+          <div class="input-item">
+            <div class="credit-infor">
+              <div class="credit-infor__titles">
+                <label class="credit-infor__titles__date">
+                  Exp. Date (MM/YY)</label
+                >
+                <label>CVC</label>
+              </div>
+              <div class="credit-infor__inputs">
+                <div>
+                  <div class="dates-inputs">
+                    <input
+                      type="number"
+                      required
+                      placeholder="MM"
+                      maxlength="2"
+                      class="credit-infor__input-date"
+                      id="monthCard"
+                      oninput="validateFieldLength(this)"
+                      name="monthCard"
+                    />
+                    <input
+                      type="number"
+                      required
+                      maxlength="2"
+                      placeholder="YY"
+                      class="credit-infor__input-date"
+                      id="yearCard"
+                      oninput="validateFieldLength(this)"
+                      name="yearCard"
+                    />
+                  </div>
+                  <p class="input-item__error" hidden id="date_error" aria-hidden="true">Can't be blank</p>
+                </div>
+                
+                <div 
+                class="credit-infor__input-cvc">
+                  <input
+                    type="number"
+                    placeholder="e.g. 123"
+                    pattern="[0-9]{3}"
+                    required
+                    maxlength="3"
+                    oninput="validateFieldLength(this)"
+                    id="cvcCard"
+                    name="cvcCard"
+                  />
+                  <p class="input-item__error" hidden id="cvcCard_error">Can't be blank</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="button" id="submit">
+            Confirm
+          </button>
+        </section>
+
+      </form>
+
+      <section class="thank-you" id="thank-you">
+        <figure class="thank-you__image">
+          <img src="./assets/icon-complete.svg" alt="complete">
+        </figure>
+        <p class="thank-you__title">THANK YOU!</p>
+        <p class="thank-you__subtitle">We've added your card details</p>
+        <button class="button" onclick="clearData()">
+          Confirm
+        </button>
+      </section>
+
+
+  
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Jose Cruz</a>.
+      </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
