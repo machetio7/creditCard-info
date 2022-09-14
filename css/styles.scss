@@ -174,7 +174,7 @@ input {
   }
   &__input-cvc {
     margin: 0 0 0 20px;
-    width: 195px;
+    width: 100%;
     input {
       width: 100%;
     }
@@ -225,10 +225,15 @@ input {
 }
 
 .attribution {
+  font-size: 11px;
+  text-align: center;
   position: absolute;
   bottom: 30px;
-  right: 0;
   left: 0;
+  right: 0;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
 
 /* -------------------- style for tablet since ipad mini ------------------- */
