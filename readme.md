@@ -30,9 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-[Desktop](./assets/desktop.png)
-[Tablet](./assets/tablet.png)
-[Mobile](./assets/mobile.png)
+![Desktop](https://raw.githubusercontent.com/machetio7/creditCard-info/master/assets/desktop.png)
+![Tablet](https://raw.githubusercontent.com/machetio7/creditCard-info/master/assets/tablet.png)
+![Mobile](https://raw.githubusercontent.com/machetio7/creditCard-info/master/assets/mobile.png)
 
 ### Links
 
